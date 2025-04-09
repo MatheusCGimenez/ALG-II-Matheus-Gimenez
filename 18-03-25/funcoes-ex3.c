@@ -1,39 +1,38 @@
 #include <stdio.h>
 
-// int somarPrimos() {
-
-// }
-
-int verificarPrimo(int value) {
-    int qntPrimos = 0;
-    if ((value % 1 == 0) && (value % value == 0)) {
-        qntPrimos++;
+int ehPrimo(int num) {
+    if (num < 2) return 0;
+    for (int i = 2; i * i <= num; i++) {
+        if (num % i == 0) return 0;
     }
-
-    return qntPrimos;
+    return 1;
 }
 
+int somaPrimos(int arr[], int n) {
+    int soma = 0;
+    for (int i = 0; i < n; i++) {
+        if (ehPrimo(arr[i])) {
+            soma += arr[i];
+        }
+    }
+    return soma;
+}
 
+int main() {
+    int n;
+    printf("Digite alguma quantidade de numero: ");
+    scanf("%d", &n);
 
-int main()
-{
+    int vetorNum[n];
 
-    int sequencia = 0;
-
-    printf("Quantos valores vc deseja adicionar? ");
-    scanf("%d", &sequencia);
-
-    int vetorNum[sequencia];
-
-    for (int i = 0; i < sequencia; i++) {
-        printf("Valor do indice %d", i);
+    for (int i = 0; i < n; i++) {
+        printf("Digite o valor do indice [%d]", i);
         scanf("%d", &vetorNum[i]);
     }
 
-    for (int i = 0; i < sequencia; i++) {
-        verificarPrimo(vetorNum[i]);
-    }
+    int resul = somaPrimos(vetorNum, n);
 
+    printf("A soma dos valores eh: %d\n", resul);
 
-    // printf("%d", )
+    return 0;
 }
