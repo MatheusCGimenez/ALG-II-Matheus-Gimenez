@@ -5,7 +5,6 @@ void text(char text[]) {
 }
 
 int main() {
-    text("teste");
-
+    text("Olá, Mundo!");
     return 0;
 }

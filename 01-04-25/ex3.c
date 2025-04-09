@@ -7,7 +7,6 @@ char text(char text[]) {
 }
 
 int main() {
-    text("alguma coisa");
-
+    text("Alguma coisa!");
     return 0;
 }

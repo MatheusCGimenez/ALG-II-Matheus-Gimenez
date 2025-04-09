@@ -1,21 +1,22 @@
 #include <stdio.h>
 
-int verificaSinal(int numero) {
-    if (numero >= 0) {
+int verPar(int numero) {
+    if (numero % 2 == 0) {
         return 1;
     }
     else {
-        return -1;
+        return 0;
     }
 }
 
 int main() {
     int valor, resultado;
+    printf("Digite algum valor:\n");
     scanf("%d", &valor);
 
-    resultado = verificaSinal(valor);
+    resultado = verPar(valor);
 
     printf("%d\n", resultado);
-    
+
     return 0;
 }

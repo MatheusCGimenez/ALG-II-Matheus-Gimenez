@@ -1,11 +1,10 @@
 #include <stdio.h>
 
-void func() {
-    printf("OI");
+void function() {
+    printf("Oi");
 }
 
 int main(){
-    func();
-
+    function();
     return 0;
 }

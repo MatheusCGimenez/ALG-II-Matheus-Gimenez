@@ -14,10 +14,9 @@ void bhaskara(int a, int b, int c) {
     }
     else {
         printf("%d \n", delta);
-
-        x1 = (-b + sqrt(delta)) / 2 * a;
-
-        x2 = (-b - sqrt(delta)) / 2 * a;
+        
+        x1 = (-b + sqrt(delta)) / (2 * a);
+        x2 = (-b - sqrt(delta)) / (2 * a);
 
         printf("Valor do X1 = %d \n", x1);
         printf("Valor do X2 = %d \n", x2);
